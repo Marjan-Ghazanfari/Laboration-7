@@ -5,17 +5,13 @@ const months = ["January", "February", "March", "April", "May", "June", "July", 
 document.querySelector('#day').innerHTML = days[d.getDay()] + ', ' + months[d.getMonth()] + '-' + d.getDate() + '-' + d.getFullYear();
 
 function showTime() {
-    //  document.querySelector('#clock').innerHTML = d.getHours() + ':' + checkTime(d.getMinutes()) + ':' + checkTime(d.getSeconds());
+    let d = new Date();    
+    // document.querySelector('#clock').innerHTML = d2.getHours() + ':' + checkTime(d2.getMinutes()) + ':' + checkTime(d2.getSeconds());
     document.querySelector('#clock').innerHTML = d.toLocaleTimeString();
-    setInterval(showTime(), 1000);
 }
 
-showTime();
+setInterval(showTime, 1000);
 
-// window.addEventListener('load', function(){
-//     showTime();
-// });
-  
 
 // function checkTime(i) {
 //          if (i < 10) {
