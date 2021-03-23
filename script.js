@@ -8,9 +8,11 @@ function showTime() {
     let d = new Date();    
     // document.querySelector('#clock').innerHTML = d2.getHours() + ':' + checkTime(d2.getMinutes()) + ':' + checkTime(d2.getSeconds());
     document.querySelector('#clock').innerHTML = d.toLocaleTimeString();
+    setTimeout(showTime, 1000);
 }
 
-setInterval(showTime, 1000);
+showTime();
+//setInterval(showTime, 1000);
 
 
 // function checkTime(i) {
